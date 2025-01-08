@@ -1,3 +1,4 @@
 [submodule "starlink-grpc-tools"]
 	path = starlink-grpc-tools
 	url = http://github.com/DanielLeone/starlink-grpc-tools
+	branch = main
