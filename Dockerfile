@@ -1,5 +1,4 @@
 FROM python:3.9
-LABEL maintainer="neurocis <neurocis@neurocis.me>"
 
 RUN true && \
 \
@@ -22,7 +21,7 @@ pip3 install --no-cache-dir $NOBIN_OPT \
     typing_extensions==4.11.0 \
     yagrc==1.1.2 grpcio-reflection==1.62.2 protobuf==4.25.3
 
-COPY dish_*.py loop_util.py starlink_*.py entrypoint.sh /app/
+COPY starlink-grpc-tools/dish_*.py starlink-grpc-tools/loop_util.py starlink-grpc-tools/starlink_*.py starlink-grpc-tools/entrypoint.sh /app/
 WORKDIR /app
 
 ENTRYPOINT ["/bin/sh", "/app/entrypoint.sh"]
